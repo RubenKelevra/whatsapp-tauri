@@ -7,7 +7,7 @@
   },
   "package": {
     "productName": "WhatsApp",
-    "version": "0.1.0"
+    "version": "0.1.1"
   },
   "tauri": {
     "allowlist": {
@@ -15,10 +15,13 @@
     },
     "bundle": {
       "active": true,
-      "category": "DeveloperTool",
-      "copyright": "",
+      "category": "SocialNetworking",
+      "copyright": "AGPL 3.0",
       "deb": {
-        "depends": []
+        "depends": [ "libwebkit2gtk-4.0-37", "libgtk-3-0", "libayatana-appindicator3-1" ]
+      },
+      "appimage": {
+        "bundleMediaFramework": false
       },
       "externalBin": [],
       "icon": [
@@ -46,6 +49,9 @@
         "timestampUrl": ""
       }
     },
+    "systemTray": {
+      "iconPath": "icons/128x128@2x.png"
+    },
     "security": {
       "csp": null
     },
@@ -54,11 +60,11 @@
     },
     "windows": [
       {
+        "height": 675,
+        "width": 1200,
         "fullscreen": false,
-        "height": 960,
         "resizable": true,
-        "title": "WhatsApp",
-        "width": 1280
+        "title": "WhatsApp"
       }
     ]
   }
